@@ -15,7 +15,7 @@ RUN echo 'root:password' | chpasswd
 
 RUN mkdir /var/run/sshd
 
-RUN sed 's/PermitRootLogin without-password/PermitRootLogin yes/' -i /etc/ssh/sshd_config
+RUN sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 EXPOSE 22
 
