@@ -4,6 +4,7 @@ MAINTAINER KevinZonda <xsa-container@kevinzonda.com>
 
 RUN apt-get update -y                 && \
     apt-get upgrade -y                && \
+    apt-get install -y apt-utils      && \
     apt-get install -y openssh-server && \
     apt-get install -y locales        && \
     rm -rf /var/lib/apt/lists/*       && \
