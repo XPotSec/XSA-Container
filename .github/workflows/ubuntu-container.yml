@@ -1,4 +1,4 @@
-name: Debian Docker Image
+name: Ubuntu Docker Image
 
 on:
   push:
